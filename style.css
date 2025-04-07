@@ -16,16 +16,6 @@
     left: 0;
     z-index: -1; /* Pune imaginea de fundal sub toate celelalte elemente */
   }
-  body {
-    background-image: url('assets/wallpaper-2560x1080_14.jpg'), url('assets/White.png');
-    background-size: cover, cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center, center center;
-    background-attachment: fixed, fixed;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-  }
   
 
   
