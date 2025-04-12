@@ -15,7 +15,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: auto;
   align-items: center;
   background-size: cover;
   background-position: center;
@@ -28,30 +28,26 @@
 
 nav {
   background-color: #ffffff;
-  padding: 25px 199px;
-  border-radius: 50px;
+  padding: 25px 570px; 
+  border-radius: 100px; 
   box-shadow: 0 4px 10px rgba(64, 0, 184, 0.1);
-  width: auto;
+  width: auto; 
   position: fixed;
-  top: 0;
+  top: auto;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2000;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* Centrăm elementele din navbar */
-  gap: 450px; /* Distanța între itemi */
+  list-style-type: none;
+  display:flex
 }
 
 nav ul li a {
   text-decoration: none;
   color: #000000;
-  padding: 15px 50px; /* Padding pentru linkuri */
+  padding: 10px 70px; /* Padding pentru linkuri */
   font-size: 20px; /* Dimensiune text */
   border-radius: 20px; /* Colțuri rotunjite */
   transition: background-color 0.3s ease;
@@ -61,3 +57,31 @@ nav ul li a:hover {
   background-color: #8957ff; /* Culoare de fundal la hover */
   opacity: 100%;
 }
+
+@media screen and (max-width:800px) {
+  nav ul {
+    flex-direction: center; /* Schimbăm direcția la verticală pe ecrane mici */
+    justify-content: center; /* Centrăm itemii pe ecrane mici */
+    align-items: center; /* Centrăm itemii pe ecrane mici */
+    gap: center; /* Distanța între itemi */
+  }
+
+  nav ul li a {
+    padding: 10px 17px; /* Padding pentru linkuri pe ecrane mici */
+    font-size: 16px; /* Dimensiune text pe ecrane mici */
+    border-radius: 15px; /* Colțuri rotunjite pe ecrane mici */
+  }
+
+  nav {
+    padding: 25px 100px; /* Padding pentru navbar pe ecrane mici */
+    width: 100%; /* Lățimea navbar-ului pe ecrane mici */
+    left: 50%; /* Centrarea navbar-ului pe ecrane mici */
+    transform: translateX(-50%); /* Centrarea navbar-ului pe ecrane mici */
+    box-shadow: 0 4px 10px rgba(64, 0, 184, 0.1); /* Umbra navbar-ului pe ecrane mici */
+  }
+
+  .background-image {
+    padding: 20px; /* Padding pentru fundal pe ecrane mici */
+  }
+}
+
